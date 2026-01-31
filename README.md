@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 FrameShot
 
-## Getting Started
+Beautiful browser screenshots in seconds. Capture any website with a sleek macOS-style browser mockup.
 
-First, run the development server:
+![FrameShot](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css)
+
+## ✨ Features
+
+- 🖼️ **Browser Mockup** - Beautiful macOS-style window frame
+- 📐 **Custom Dimensions** - Choose from presets or set your own
+- 📱 **Device Presets** - Desktop, tablet, mobile, and social media sizes
+- 🎨 **Aspect Ratios** - Quick aspect ratio adjustments
+- ⬇️ **Easy Download** - One-click PNG download
+- ⚡ **Fast** - Powered by Puppeteer for reliable captures
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repo
+git clone https://github.com/AniruddhaChattopadhyay/frameshot.git
+cd frameshot
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📐 Available Presets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Desktop
+- Desktop HD (1920×1080)
+- Desktop (1440×900)
+- Laptop (1366×768)
 
-## Learn More
+### Tablet
+- Tablet Portrait (768×1024)
+- Tablet Landscape (1024×768)
 
-To learn more about Next.js, take a look at the following resources:
+### Mobile
+- iPhone 14 Pro (393×852)
+- iPhone SE (375×667)
+- Android (412×915)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Social Media
+- Twitter Post (1200×675)
+- Instagram Post (1080×1080)
+- LinkedIn Post (1200×627)
+- OG Image (1200×630)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Screenshots**: Puppeteer
+- **Deployment**: Vercel-ready
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### POST `/api/screenshot`
+
+Captures a screenshot of the specified URL.
+
+**Request Body:**
+```json
+{
+  "url": "https://example.com",
+  "width": 1440,
+  "height": 900
+}
+```
+
+**Response:**
+```json
+{
+  "screenshot": "data:image/png;base64,..."
+}
+```
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AniruddhaChattopadhyay/frameshot)
+
+**Note:** For Vercel deployment, you may need to use `@sparticuz/chromium` instead of the full Puppeteer for serverless compatibility.
+
+### Self-hosted
+
+```bash
+npm run build
+npm start
+```
+
+## 📄 License
+
+MIT © [Ani](https://github.com/AniruddhaChattopadhyay)
+
+---
+
+Built with ❤️ and ☕
